@@ -1,0 +1,78 @@
+.roboto{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+html{
+    background-color: white;
+    color: rgb(89, 185, 250);
+    font-family: "Roboto";
+}
+
+
+header{
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    background-color: rgb(89, 185, 250);
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.botoninicio{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+.botoninicio:hover{
+    transform: scale(1.1);
+}
+.botoninicio:active{
+    transform: scale(1.05);
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.tarjeta{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(89, 185, 250);
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    align-items: center;
+    justify-content: space-around;
+    width: 320px;
+    height: 200px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+.tarjeta:hover{
+    transform: scale(1.1);
+}
+.tarjeta:active{
+    transform: scale(1.05);
+}
+.icon{
+    width: 150px;
+}
