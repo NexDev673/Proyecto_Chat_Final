@@ -172,12 +172,13 @@
                         <th>Nombre</th>
                         <th>Descripción</th>
                         <th>Estado</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php if (empty($departamentos)): ?>
                         <tr>
-                            <td colspan="4">Todavía no hay departamentos registrados.</td>
+                            <td colspan="5">Todavía no hay departamentos registrados.</td>
                         </tr>
                     <?php else: ?>
                         <?php foreach ($departamentos as $departamento): ?>
@@ -186,6 +187,20 @@
                                 <td><?= esc($departamento['nombre']) ?></td>
                                 <td><?= esc($departamento['descripcion'] ?? '') ?></td>
                                 <td><?= esc($departamento['estado']) ?></td>
+                                <td> <a href="<?= site_url('departamentos/editar/' . $departamento['id']) ?>">
+                                        <button type="submit">Editar </button>
+                                    </a> <br> <br>
+                                    <form action="<?= site_url('departamentos/eliminar/' . $departamento['id']) ?>"
+                                        method="post"
+                                        onsubmit="return confirm('¿Estás seguro de eliminar este departamento?');">
+
+                                        <?= csrf_field() ?>
+
+                                    <button type="submit" style="background-color: #ff0000; color: white; border: none; padding: 10px 20px;" >Eliminar</button>
+
+                                </form>
+                                </td>
+                                
                             </tr>
                         <?php endforeach; ?>
                     <?php endif; ?>
